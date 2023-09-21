@@ -1,0 +1,32 @@
+.header {
+  background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0) 99.86%);
+  padding: 30px 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header div {
+  display: flex;
+  align-items: center;
+  gap: 0.5px;
+}
+.header span img {
+  width: 50px;
+  height: 40px;
+}
+.header div a img {
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+}
+.nav span a {
+  color: #fff;
+  text-align: right;
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-right: 18px;
+  padding-left: 18px;
+}
