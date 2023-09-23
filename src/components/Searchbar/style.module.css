@@ -1,0 +1,30 @@
+.searchbar {
+  background: var(--gray-gray-5, #37383e);
+  border-radius: 5px;
+  padding: 16px 18px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  width: 849px;
+  height: max-content;
+}
+.searchbar input {
+  background: none;
+  border: none;
+  outline: none;
+  margin-right: 16px;
+  color: #fff;
+}
+.serachbar input::placeholder {
+  color: var(--gray-gray-3, #aaa);
+  text-align: right;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.searchIcon {
+  width: 19px;
+  height: 19px;
+}

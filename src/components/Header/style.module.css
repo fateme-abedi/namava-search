@@ -11,13 +11,16 @@
   gap: 0.5px;
 }
 .header span img {
-  width: 50px;
-  height: 40px;
+  width: 65px;
+  height: 55px;
 }
 .header div a img {
   width: 50px;
   height: 40px;
   padding-left: 10px;
+}
+.nav {
+  margin-right: 20px;
 }
 .nav span a {
   color: #fff;

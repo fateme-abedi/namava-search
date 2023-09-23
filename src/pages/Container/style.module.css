@@ -1,0 +1,7 @@
+.container {
+  padding: 24px 30px;
+}
+.search {
+  display: flex;
+  justify-content: space-around;
+}
