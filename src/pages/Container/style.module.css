@@ -3,5 +3,8 @@
 }
 .search {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.content {
+  width: 70%;
 }

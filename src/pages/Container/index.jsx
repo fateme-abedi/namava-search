@@ -5,13 +5,14 @@ import Searchbar from "../../components/Searchbar/index.jsx";
 import RootContent from "../../components/RootContent/index.jsx";
 
 export default function Container() {
-  const [searchQuery, setSearchQuery] =useState['']
+  const [searchQuery, setSearchQuery] =useState('')
+  console.log(searchQuery);
 
   return (
     <section className={styles.container}> 
       <div className={styles.search}>
         <Filter/>
-        <div>
+        <div className={styles.content}>
         <Searchbar setSearchQuery={setSearchQuery}/>
         <RootContent/>
 

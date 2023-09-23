@@ -15,12 +15,10 @@
   height: 55px;
 }
 .header div a img {
-  width: 50px;
-  height: 40px;
   padding-left: 10px;
 }
 .nav {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .nav span a {
   color: #fff;
@@ -31,5 +29,24 @@
   font-weight: 400;
   line-height: normal;
   padding-right: 18px;
-  padding-left: 18px;
+}
+
+@media screen and (min-width: 1280px) {
+  .header span img {
+    width: auto;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header div a img {
+    height: 40px;
+    min-width: 40px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .header div a img {
+    height: 30px;
+    min-width: 30px;
+  }
 }

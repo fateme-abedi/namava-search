@@ -1,8 +1,8 @@
 .filter {
   background: var(--gray-gray-5, #37383e);
-  padding: 24px;
+  padding: 14px;
   border-radius: 5px;
-  width: 30%;
+  width: 25%;
   height: max-content;
 }
 .title {
