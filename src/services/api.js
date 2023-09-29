@@ -1,5 +1,7 @@
 import axios from "axios";
 const fetchData = async (page, searchQuery) => {
+  if (searchQuery) {
+  }
   try {
     const response = await axios.get(
       `https://www.namava.ir/api/v3.0/search/advance?type=all&count=20&page=${page}&query=${searchQuery}`
