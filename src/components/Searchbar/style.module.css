@@ -30,3 +30,10 @@
   width: 19px;
   height: 19px;
 }
+.deleteIcon {
+  width: 25px;
+  height: 25px;
+  float: left;
+  cursor: pointer;
+  left: 0;
+}
