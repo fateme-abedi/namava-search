@@ -4,4 +4,5 @@ img {
 }
 body {
   background: #121212;
+  overflow-y: scroll;
 }
