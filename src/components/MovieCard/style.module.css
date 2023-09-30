@@ -2,12 +2,13 @@
   width: 20%;
   padding: 10px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 20px;
   height: 310px;
-  background: linear-gradient(180deg, #464646 0%, #222 100%);
 }
 .cardImg {
   height: 250px;
+  background: linear-gradient(180deg, #464646 0%, #222 100%);
+  border-radius: 15px;
 }
 
 .cardImg img {
