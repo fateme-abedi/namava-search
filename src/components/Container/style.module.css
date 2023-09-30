@@ -1,0 +1,11 @@
+.container {
+  padding: 24px 30px;
+  height: 100%;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  width: 70%;
+}
