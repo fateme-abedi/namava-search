@@ -64,8 +64,8 @@ export default function Container() {
 
   const filteredMovies = movies.filter(
     (movie) =>
-      (!typeFilter.Movie && movie.type === "Movie") ||
-      (!typeFilter.Series && movie.type === "Series")
+      (typeFilter.Movie && movie.type === "Movie") ||
+      (typeFilter.Series && movie.type === "Series")
   );
 
   return (
