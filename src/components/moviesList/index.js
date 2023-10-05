@@ -4,7 +4,6 @@ import MovieCard from "../MovieCard/index.js";
 
 export default function Container({ movies }) {
   return (
-    <>
       <div className={styles.movieList}>
         {movies.map((movie) => (
           <MovieCard
@@ -14,6 +13,5 @@ export default function Container({ movies }) {
           />
         ))}
       </div>
-    </>
   );
 }

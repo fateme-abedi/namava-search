@@ -2,6 +2,7 @@
   background: var(--gray-gray-5, #37383e);
   border-radius: 5px;
   padding: 16px 18px;
+  line-height: 24px;
   vertical-align: middle;
   display: flex;
   align-items: center;
@@ -16,7 +17,15 @@
   margin-right: 16px;
   color: #fff;
   width: 100%;
+  color: var(--gray-white, #fff);
+  text-align: right;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
+
 .serachbar input::placeholder {
   color: var(--gray-gray-3, #aaa);
   text-align: right;

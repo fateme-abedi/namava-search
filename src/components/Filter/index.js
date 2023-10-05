@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 
-export default function Filter({ handleChange, checked, name }) {
+export default function Filter({ handleChange, checked, names }) {
   return (
     <div className={styles.filter}>
       <div>
@@ -11,7 +11,7 @@ export default function Filter({ handleChange, checked, name }) {
         <label className={styles.container}>
           <input
             type="checkbox"
-            name={name[0]}
+            name={names[0]}
             onChange={handleChange}
             checked={checked.Movie}
           />
@@ -22,7 +22,7 @@ export default function Filter({ handleChange, checked, name }) {
         <label className={styles.container}>
           <input
             type="checkbox"
-            name={name[1]}
+            name={names[1]}
             onChange={handleChange}
             checked={checked.Series}
           />

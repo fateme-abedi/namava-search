@@ -3,10 +3,12 @@ import styles from "./style.module.css";
 
 export default function SearchBar({ setSearchQuery }) {
   const [query, setQuery] = useState("");
+  
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
     setQuery(event.target.value);
   };
+
   const handleDeleteInput = () => {
     setQuery("");
     setSearchQuery("");
@@ -27,7 +29,7 @@ export default function SearchBar({ setSearchQuery }) {
         onChange={handleInputChange}
         placeholder="فیلم، سریال، بازیگر و ژانر"
       />
-      {query ? (
+      {query && (
         <span onClick={handleDeleteInput}>
           <img
             src="./assets/cross.png"
@@ -35,8 +37,6 @@ export default function SearchBar({ setSearchQuery }) {
             className={styles.deleteIcon}
           />
         </span>
-      ) : (
-        ""
       )}
     </div>
   );
