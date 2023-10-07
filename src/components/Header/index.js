@@ -6,7 +6,7 @@ export default function Header() {
     <header className={styles.header} dir="rtl">
       <div>
         <span>
-          <img src="./assets/Logo.jpeg" alt="namava logo" />
+          <img src="./assets/logo.jpeg" alt="namava logo" />
         </span>
         <nav className={styles.nav}>
           <span>

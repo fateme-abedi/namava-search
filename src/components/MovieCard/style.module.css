@@ -9,7 +9,7 @@
 }
 .cardImg {
   height: 300px;
-  background: linear-gradient(180deg, #464646 0%, #222 100%);
+  background: #464646;
   border-radius: 15px;
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
+import CheckboxInput from "../../utils/CheckboxInput";
 
 export default function Filter({ handleChange, checked, names }) {
   return (
@@ -8,27 +9,22 @@ export default function Filter({ handleChange, checked, names }) {
         <span className={styles.title}>فیلترها</span>
       </div>
       <div className={styles.checkbox}>
-        <label className={styles.container}>
-          <input
-            type="checkbox"
-            name={names[0]}
-            onChange={handleChange}
-            checked={checked.Movie}
-          />
-          <span className={styles.checkmark}></span>
-          <span className={styles.name}>فیلم</span>
-        </label>
-
-        <label className={styles.container}>
-          <input
-            type="checkbox"
-            name={names[1]}
-            onChange={handleChange}
-            checked={checked.Series}
-          />
-          <span className={styles.checkmark}></span>
-          <span className={styles.name}>سریال</span>
-        </label>
+        <CheckboxInput
+          names={names}
+          handleChange={handleChange}
+          checked={checked}
+          index={0}
+          type={"Movie"}
+          children="فیلم"
+        />
+        <CheckboxInput
+          names={names}
+          handleChange={handleChange}
+          checked={checked}
+          index={1}
+          type={"Series"}
+          children="سریال"
+        />
       </div>
     </div>
   );
