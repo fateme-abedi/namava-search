@@ -11,11 +11,20 @@ const fetchData = async (page, searchQuery) => {
     const movieData = resultItems[0].groups.Media.items;
     if (movieData.length === 0) return [];
 
-    return movieData;
+    return movieData.map((movie) => ({
+      id: movie.id,
+      name: movie.name,
+      slug: movie.slug,
+      url: movie.url,
+      imageUrl: movie.image_url,
+      type: movie.type,
+      contentPlayAccessType: movie.contentPlayAccessType,
+    }));
   } catch (error) {
     console.error(error.response.data);
     return [];
   }
 };
+console.log(fetchData(1, "f"));
 
 export default fetchData;
