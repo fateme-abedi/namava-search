@@ -3,7 +3,7 @@ import styles from "./style.module.css";
 
 export default function SearchBar({ setSearchQuery }) {
   const [query, setQuery] = useState("");
-  
+
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
     setQuery(event.target.value);
@@ -18,7 +18,7 @@ export default function SearchBar({ setSearchQuery }) {
     <div className={styles.searchbar}>
       <span>
         <img
-          src="./assets/Search.png"
+          src="./assets/search.png"
           alt="search"
           className={styles.searchIcon}
         />

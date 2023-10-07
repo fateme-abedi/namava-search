@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
 import Filter from "../Filter/index.js";
 import Searchbar from "../Searchbar/index.js";
-import RootContent from "../EmptyState/index.js";
-import ResultFrame from "../moviesList/index.js";
+
 import fetchData from "../../services/fetchMovieData";
+import ResultSearch from "../ResultSearch";
 
 export default function Container() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -74,23 +74,11 @@ export default function Container() {
         />
         <div className={styles.content}>
           <Searchbar setSearchQuery={setSearchQuery} />
-          {searchQuery ? (
-            <ResultFrame
-              query={searchQuery}
-              movies={filteredMovies.length === 0 ? movies : filteredMovies}
-            />
-          ) : (
-            <RootContent
-              imgSrc={"./assets/Empty State.png"}
-              description={`عنوان فیلم، سریال یا بازیگر مورد نظر خود را جستجو کنید و یا از طریق فیلتر‌های موجود، فیلم و سریال مورد علاقه خود را پیدا کنید.`}
-            />
-          )}
-          {searchQuery && movies.length === 0 && (
-            <RootContent
-              imgSrc={"./assets/Not Found.png"}
-              description={`موردی یافت نشد`}
-            />
-          )}
+          <ResultSearch
+            searchQuery={searchQuery}
+            movies={movies}
+            filteredMovies={filteredMovies}
+          />
         </div>
       </div>
     </section>

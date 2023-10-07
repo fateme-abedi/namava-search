@@ -37,13 +37,13 @@ export default function Header() {
       </div>
       <div>
         <a href="#">
-          <img src="./assets/Search.png" alt="search" />
+          <img src="./assets/search.png" alt="search" />
         </a>
         <a href="#">
-          <img src="./assets/Message.png" alt="message" />
+          <img src="./assets/message.png" alt="message" />
         </a>
         <a href="#">
-          <img src="./assets/Ellipse.png" alt="ellipse" />
+          <img src="./assets/ellipse.png" alt="ellipse" />
         </a>
       </div>
     </header>
