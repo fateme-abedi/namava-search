@@ -3,12 +3,12 @@
   padding: 10px;
   box-sizing: border-box;
   border-radius: 20px;
-  height: 340px;
+  height: 320px;
   border-radius: 5px;
   margin-bottom: 40px;
 }
 .cardImg {
-  height: 310px;
+  height: 300px;
   background: linear-gradient(180deg, #464646 0%, #222 100%);
   border-radius: 15px;
 }
