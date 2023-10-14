@@ -3,22 +3,18 @@ import styles from "./style.module.css";
 import Filter from "../Filter/index.js";
 import Searchbar from "../Searchbar/index.js";
 
-import fetchData from "../../services/fetchMovieData";
+import fetchData from "../../services/fetchMoviesData";
 import ResultSearch from "../ResultSearch";
 
 export default function Container() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [typeFilter, setTypeFilter] = useState({
-    Movie: false,
-    Series: false,
-  });
+  const [movieType, setMovieType] = useState([]);
+
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
 
-  const checkboxNames = ["Movie", "Series"];
-
   const fetchMovies = async () => {
-    const movieData = await fetchData(page, searchQuery);
+    const movieData = await fetchData(movieType, page, searchQuery);
     setMovies((prevMovies) => [...prevMovies, ...movieData]);
   };
 
@@ -31,6 +27,12 @@ export default function Container() {
     setPage(1);
     fetchMovies();
   }, [searchQuery]);
+
+  useEffect(() => {
+    setMovies([]);
+    setPage(1);
+    fetchMovies();
+  }, [movieType]);
 
   function handleScroll() {
     if (
@@ -48,37 +50,27 @@ export default function Container() {
     };
   }, []);
 
-  const handleChange = (e) => {
-    const { name } = e.target;
-    setTypeFilter((prevState) => {
-      return {
-        ...prevState,
-        [name]: !prevState[name],
-      };
-    });
+  const handleTypeChange = (e) => {
+    const { value, checked } = e.target;
+
+    if (checked) {
+      setMovieType((prevTypes) => [...prevTypes, value]);
+    } else {
+      setMovieType((prevTypes) => prevTypes.filter((type) => type !== value));
+    }
   };
 
-  const filteredMovies = movies.filter(
-    (movie) =>
-      (typeFilter.Movie && movie.type === "Movie") ||
-      (typeFilter.Series && movie.type === "Series")
-  );
-
+  console.log("mov: " + movies);
   return (
     <section className={styles.container}>
       <div className={styles.search}>
-        <Filter
-          handleChange={handleChange}
-          checked={typeFilter}
-          names={checkboxNames}
-        />
+        <Filter handleChange={handleTypeChange} type={movieType} />
         <div className={styles.content}>
-          <Searchbar setSearchQuery={setSearchQuery} />
-          <ResultSearch
+          <Searchbar
             searchQuery={searchQuery}
-            movies={movies}
-            filteredMovies={filteredMovies}
+            setSearchQuery={setSearchQuery}
           />
+          <ResultSearch searchQuery={searchQuery} movies={movies} />
         </div>
       </div>
     </section>

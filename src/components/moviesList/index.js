@@ -6,7 +6,14 @@ export default function Container({ movies }) {
   return (
     <div className={styles.movieList}>
       {movies.map((movie) => (
-        <MovieCard key={movie.id} src={movie.imageUrl} movieName={movie.name} />
+        <MovieCard
+          key={movie.id}
+          id={movie.id}
+          src={movie.imageUrl}
+          movieName={movie.name}
+          type={movie.type}
+          url={movie.url}
+        />
       ))}
     </div>
   );

@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import styles from "./style.module.css";
 import CheckboxInput from "../../utils/CheckboxInput";
 
-export default function Filter({ handleChange, checked, names }) {
+export default function Filter({ handleChange, type }) {
+  const checkboxes = [
+    { name: "Movie", children: "فیلم", checked: type.includes("Movie") },
+    { name: "ُSeries", children: "سریال", checked: type.includes("Series") },
+  ];
+
   return (
     <div className={styles.filter}>
       <div>
@@ -10,19 +15,17 @@ export default function Filter({ handleChange, checked, names }) {
       </div>
       <div className={styles.checkbox}>
         <CheckboxInput
-          names={names}
+          name="Movie"
+          value="movie"
           handleChange={handleChange}
-          checked={checked}
-          index={0}
-          type={"Movie"}
+          checked={type.includes("movie")}
           children="فیلم"
         />
         <CheckboxInput
-          names={names}
+          name="Series"
+          value="series"
           handleChange={handleChange}
-          checked={checked}
-          index={1}
-          type={"Series"}
+          checked={type.includes("series")}
           children="سریال"
         />
       </div>

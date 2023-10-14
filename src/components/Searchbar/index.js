@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 
-export default function SearchBar({ setSearchQuery }) {
-  const [query, setQuery] = useState("");
-
+export default function SearchBar({ searchQuery, setSearchQuery }) {
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
-    setQuery(event.target.value);
   };
 
   const handleDeleteInput = () => {
-    setQuery("");
     setSearchQuery("");
   };
 
@@ -25,11 +21,11 @@ export default function SearchBar({ setSearchQuery }) {
       </span>
       <input
         type="text"
-        value={query}
+        value={searchQuery}
         onChange={handleInputChange}
         placeholder="فیلم، سریال، بازیگر و ژانر"
       />
-      {query && (
+      {searchQuery && (
         <span onClick={handleDeleteInput}>
           <img
             src="./assets/cross.png"
